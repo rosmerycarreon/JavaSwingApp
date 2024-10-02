@@ -4,6 +4,8 @@
  */
 package com.rosmery.pe.presentacion;
 
+import java.awt.BorderLayout;
+
 /**
  *
  * @author Alumno-PB203
@@ -27,7 +29,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        principal = new javax.swing.JPanel();
         jMenuBar3 = new javax.swing.JMenuBar();
         jMenu5 = new javax.swing.JMenu();
         btnmenucalculadora = new javax.swing.JMenuItem();
@@ -37,16 +39,16 @@ public class JFramePrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("aplicacion Javaswin");
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        principal.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout principalLayout = new javax.swing.GroupLayout(principal);
+        principal.setLayout(principalLayout);
+        principalLayout.setHorizontalGroup(
+            principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1199, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        principalLayout.setVerticalGroup(
+            principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 700, Short.MAX_VALUE)
         );
 
@@ -55,13 +57,13 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(principal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(principal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -70,6 +72,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenu5.setText("APLICACIONES");
 
         btnmenucalculadora.setText("calculadora");
+        btnmenucalculadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmenucalculadoraActionPerformed(evt);
+            }
+        });
         jMenu5.add(btnmenucalculadora);
 
         btnmenucontador.setText("contador");
@@ -99,6 +106,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnmenucalculadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmenucalculadoraActionPerformed
+        //este codigo sirve para llamar un panel
+        Calculadora cal = new Calculadora();
+        cal.setSize(400, 677);
+        cal.setLocation(0,0);
+        principal.removeAll();
+        principal.add(cal, BorderLayout.CENTER);
+        principal.revalidate();
+        principal.repaint();
+    }//GEN-LAST:event_btnmenucalculadoraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,6 +160,6 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel principal;
     // End of variables declaration//GEN-END:variables
 }
