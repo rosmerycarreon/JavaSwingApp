@@ -5,8 +5,12 @@
         <group>
             <file>file:/D:/----/java_swing/JavaSwingApp/src/com/rosmery/pe/presentacion/Contador.java</file>
             <file>file:/D:/----/java_swing/JavaSwingApp/src/com/rosmery/pe/presentacion/JFramePrincipal.java</file>
-            <file>file:/D:/----/java_swing/JavaSwingApp/src/com/rosmery/pe/db/conexion.java</file>
+            <file>file:/D:/----/java_swing/JavaSwingApp/src/com/rosmery/pe/cdatosdao/TipoDocumentoDao.java</file>
             <file>file:/D:/----/java_swing/JavaSwingApp/src/com/rosmery/pe/presentacion/JFrameLogin.java</file>
+            <file>file:/D:/----/java_swing/JavaSwingApp/src/com/rosmery/pe/db/conexion.java</file>
+            <file>file:/D:/----/java_swing/JavaSwingApp/src/com/rosmery/pe/ctest/Test.java</file>
+            <file>file:/D:/----/java_swing/JavaSwingApp/src/com/rosmery/pe/cnegocio/TipoDocumentoBO.java</file>
+            <file>file:/D:/----/java_swing/JavaSwingApp/src/com/rosmery/pe/cmodelo/TipoDocumento.java</file>
             <file>file:/D:/----/java_swing/JavaSwingApp/src/com/rosmery/pe/presentacion/Calculadora.java</file>
         </group>
     </open-files>
