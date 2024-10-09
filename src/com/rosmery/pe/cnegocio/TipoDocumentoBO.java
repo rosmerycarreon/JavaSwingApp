@@ -24,4 +24,31 @@ public class TipoDocumentoBO {
         }
         return mensaje;
     }
+    //eliminar tipo_documento
+       public String eliminarTipoDocumento(TipoDocumento tipoDocumento) throws SQLException{
+        Connection c = conexion.getConnection();
+        
+        try { 
+            mensaje = tdd.eliminarTipoDocumento(c, tipoDocumento);
+            c.commit();
+        } catch (Exception e) {
+            c.rollback();
+        } finally {
+            c.close();
+        }
+        return mensaje;
+    }
+    //modificar tipo documento
+       public String modificarTipoDocumento(TipoDocumento tipoDocumento) throws SQLException{
+        Connection c = conexion.getConnection();
+        c.commit();
+        try { 
+            tdd.modificarTipoDocumento(c, tipoDocumento);
+        } catch (Exception e) {
+            c.rollback();
+        } finally {
+            c.close();
+        }
+        return mensaje;
+    }
 }

@@ -1,15 +1,19 @@
 
 package com.rosmery.pe.cmodelo;
 
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
-        
+     
 public class TipoDocumento {
     private int idTipoDocumento;
     private String nombre;
     private String sigla;
     private String estado;
     private int orden;
-    private Date fecha;
+    private Date fechaRegistro;
+    private Date fechaActualiza;
 
 //    public TipoDocumento(int idTipoDocumento, String nombre, String sigla, String estado, int orden, Date fecha) {
 //        this.idTipoDocumento = idTipoDocumento;
@@ -60,12 +64,21 @@ public class TipoDocumento {
         this.orden = orden;
     }
 
-    public Date getFecha() {
-        return fecha;
+    public String getFechaRegistro() {
+        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+        return formato.format(fechaRegistro);
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setFechaRegistro(String fechaRegistro) throws ParseException  {
+        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+        this.fechaRegistro = formato.parse(fechaRegistro);
     }
-    
+    public String getFechaActualiza() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        return dateFormat.format(fechaActualiza);
+    }
+    public void setFechaActualiza(String fechaActualiza) throws ParseException {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        this.fechaActualiza = dateFormat.parse(fechaActualiza);
+    }
 }
