@@ -30,14 +30,15 @@ public class Test {
     }
     //modificar tipo de documento
      public void modificar() throws SQLException, ParseException{
-        td.setNombre("Registro Unico de XD");
+        td.setNombre("LIBRETA MILITAR");
         td.setEstado("1");
         td.setOrden(1);
-        td.setSigla("RUC");
+        td.setSigla("LM");
         td.setFechaRegistro("08-10-2024");
         td.setFechaActualiza("08-10-2023");
         
-        td.setIdTipoDocumento(12);
+        td.setIdTipoDocumento(2);
+
         tdbo.modificarTipoDocumento(td);
      }
     public static void main(String[] args) throws SQLException, ParseException{

@@ -5,6 +5,7 @@ package com.rosmery.pe.cmodelo;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JTextField;
      
 public class TipoDocumento {
     private int idTipoDocumento;
@@ -80,5 +81,17 @@ public class TipoDocumento {
     public void setFechaActualiza(String fechaActualiza) throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         this.fechaActualiza = dateFormat.parse(fechaActualiza);
+    }
+
+    public void setNombreTipoDocumento(JTextField txtnombre) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void setnombreTipoDocumento() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String getId_Tipo_Documento() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

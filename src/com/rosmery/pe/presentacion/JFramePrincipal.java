@@ -20,6 +20,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         btnmenucalculadora = new javax.swing.JMenuItem();
         btnmenucontador = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        btnmenutipodicumento = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jPersonaDocumento = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("aplicacion Javaswin");
@@ -77,6 +82,32 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenu6.setText("Edit");
         jMenuBar3.add(jMenu6);
 
+        jMenu1.setText("MANTENIMIENTO");
+
+        btnmenutipodicumento.setText("Tipo Documento");
+        btnmenutipodicumento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmenutipodicumentoActionPerformed(evt);
+            }
+        });
+        jMenu1.add(btnmenutipodicumento);
+
+        jMenuItem2.setText("Genero");
+        jMenu1.add(jMenuItem2);
+
+        jMenuItem3.setText("Persona");
+        jMenu1.add(jMenuItem3);
+
+        jPersonaDocumento.setText("Persona Documento");
+        jPersonaDocumento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPersonaDocumentoActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jPersonaDocumento);
+
+        jMenuBar3.add(jMenu1);
+
         setJMenuBar(jMenuBar3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -89,9 +120,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -118,8 +147,31 @@ public class JFramePrincipal extends javax.swing.JFrame {
         principal.repaint();
     }//GEN-LAST:event_btnmenucontadorActionPerformed
 
+    private void btnmenutipodicumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmenutipodicumentoActionPerformed
+        JPTipoDocumento tp = new JPTipoDocumento();
+        tp.setSize(1100, 600);
+        tp.setLocation(0,0);
+        principal.removeAll();
+        principal.add(tp, BorderLayout.CENTER);
+        principal.revalidate();
+        principal.repaint();
+    }//GEN-LAST:event_btnmenutipodicumentoActionPerformed
+
+    private void jPersonaDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPersonaDocumentoActionPerformed
+         JPPersonaDocumento tp = new JPPersonaDocumento();
+        tp.setSize(1100, 600);
+        tp.setLocation(0,0);
+        principal.removeAll();
+        principal.add(tp, BorderLayout.CENTER);
+        principal.revalidate();
+        principal.repaint();
+    }//GEN-LAST:event_jPersonaDocumentoActionPerformed
+
+//    int seleccion = tablaTipoDocumento.rowAtPoint(evt.getPoint());
+//    idTipoDocumento = tablaTipoDocumento.getValueAT(seleccion, 0)+"";
+//    txtNombre.setText(tablaTipoDocumento.getValueAT(seleccion, 1)+"");
+ //   System.out.println(idTipoDocumento);
     
-   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -155,10 +207,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem btnmenucalculadora;
     private javax.swing.JMenuItem btnmenucontador;
+    private javax.swing.JMenuItem btnmenutipodicumento;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar3;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JMenuItem jPersonaDocumento;
     private javax.swing.JPanel principal;
     // End of variables declaration//GEN-END:variables
 }
